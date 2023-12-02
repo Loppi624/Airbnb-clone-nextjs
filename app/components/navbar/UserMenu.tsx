@@ -1,19 +1,18 @@
-"use client"
+"use client";
 
-import { AiOutlineMenu } from "react-icons/ai"
+import { AiOutlineMenu } from "react-icons/ai";
 import Avatar from "../Avatar";
 import { useCallback, useState } from "react";
 import MenuItem from "./MenuItem";
 
-
 const UserMenu = () => {
-  const [isOpen,setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleOpen = useCallback(() => {
     setIsOpen((value) => !value);
-  }, [])
+  }, []);
 
-  return ( 
+  return (
     <div className="relative">
       <div className="flex flex-row items-center gap-3">
         <div
@@ -59,7 +58,7 @@ const UserMenu = () => {
       </div>
 
       {isOpen && (
-        <div 
+        <div
           className="
             absolute
             rounded-xl
@@ -75,20 +74,14 @@ const UserMenu = () => {
         >
           <div className="flex flex-col cursor-pointer">
             <>
-              <MenuItem
-                onClick={() => {}}
-                label="Log in"
-              />
-              <MenuItem
-                onClick={() => {}}
-                label="Sign up"
-              />
+              <MenuItem onClick={() => {}} label="Log in" />
+              <MenuItem onClick={() => {}} label="Sign up" />
             </>
           </div>
         </div>
       )}
     </div>
-   );
-}
- 
+  );
+};
+
 export default UserMenu;
