@@ -2,7 +2,8 @@ import { Nunito } from 'next/font/google'
 
 import './globals.css'
 import Navbar from './components/navbar/Navbar';
-import Model from './components/models/Model';
+import ResgisterModel from './components/models/RegisterModel';
+import ToasterProvider from './providers/ToasterProvider';
 
 
 export const metadata= {
@@ -20,7 +21,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        <Model isOpen actionLabel='Submit'/>
+        <ToasterProvider />
+        <ResgisterModel />
         <Navbar />
         {children}
       </body>
